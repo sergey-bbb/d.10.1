@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оповещение</title>
+</head>
+<body>
+    <h2> Здравствуй, новые статьи за последнюю неделю </h2>
+<ul>
+    {% for new in news %}
+    <li><a href="{{ link }}{{ new.get_absolute_url }}"> {{ new.article_title }} </a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
